@@ -7,18 +7,16 @@ _ = require("lodash");
 const {
   Warrior,
   Weapon,
-  Armor
+  Armor,
+  rollDice
 } = require("./game");
 
-describe("Test Armour class", () => {
-  describe("Test calculatebonus function", () => {
-    it("Bonus shouldnt be 0", () => {
-     
-      var spineArmor = new Armor("Spine Armor", 6);
-      var spineChain = new Weapon("Spine Chain", 5);
-      Scorpion = new Warrior("Scorpion", 7, 7, [spineArmor, spineChain]);
-      console.log("armour bonus "+Scorpion.armorBonus);
-      expect(Scorpion.armorBonus).not.be.equal(0);
-    });
+
+describe("Test for MK4", () => {
+  it("Roll Dice Should not return 0", () => {
+    var rollRiceValue =  Warrior.rollDice(1000,20);   
+    console.log("ssssss "+rollRiceValue)
+    rollRiceValue.should.not.equal(0);
   });
 });
+
