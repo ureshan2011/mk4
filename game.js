@@ -15,7 +15,7 @@ class Warrior {
   static rollDice(times, type) {
     var total = 0;
     for (var i = 0; i < times; i++) {
-      console.log("ssssss "+ total)
+      console.log("ssssss " + total);
       total += Math.round(Math.random() * type);
       
     }

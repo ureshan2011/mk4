@@ -15,7 +15,7 @@ const {
 describe("Test for MK4", () => {
   it("Roll Dice Should not return 0", () => {
     var rollRiceValue =  Warrior.rollDice(1000,20);   
-    console.log("ssssss "+rollRiceValue)
+    console.log("RollDice value "+rollRiceValue)
     rollRiceValue.should.not.equal(0);
   });
 });
