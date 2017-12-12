@@ -2,6 +2,12 @@ _ = require("lodash");
 var Scorpion;
 var LiuKang;
 
+const getWarrior = (callback) => {
+  setTimeout(() => {
+    callback(null, require("./database.json"));
+  }, 50);
+};
+
 class Warrior {
   constructor(name, strength, skill, gear) {
     this.name = name;
@@ -9,9 +15,10 @@ class Warrior {
     this.skill = skill;
     this.gear = gear;
     this.calculateBonus();
-    this.armorBonus = 0;
+    //this.armorBonus = 0;
   }
 
+  
   static rollDice(times, type) {
     var total = 0;
     for (var i = 0; i < times; i++) {
