@@ -16,6 +16,7 @@ class Warrior {
     var total = 0;
     for (var i = 0; i < times; i++) {
       total += Math.round(Math.random() * type);
+
       
     }
     return total;
